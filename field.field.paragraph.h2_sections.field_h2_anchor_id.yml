@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h2_anchor_id
+    - paragraphs.paragraphs_type.h2_sections
+  module:
+    - computed_field
+id: paragraph.h2_sections.field_h2_anchor_id
+field_name: field_h2_anchor_id
+entity_type: paragraph
+bundle: h2_sections
+label: 'H2 Anchor ID'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  code: '$value = strtolower(preg_replace("![^a-z0-9]+!i", "-", $entity->field_h2_title->value));'
+field_type: computed_string

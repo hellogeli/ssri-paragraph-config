@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_id
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - computed_field
+id: paragraph.accordion.field_accordion_id
+field_name: field_accordion_id
+entity_type: paragraph
+bundle: accordion
+label: 'Accordion ID'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings:
+  code: '$value = strtolower(preg_replace("![^a-z0-9]+!i", "-", $entity->field_accordion_header_title->value));'
+field_type: computed_string

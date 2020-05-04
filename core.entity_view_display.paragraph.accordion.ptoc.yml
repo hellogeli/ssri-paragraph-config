@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.ptoc
+    - field.field.paragraph.accordion.field_accordion_body_content
+    - field.field.paragraph.accordion.field_accordion_header_content
+    - field.field.paragraph.accordion.field_accordion_header_title
+    - field.field.paragraph.accordion.field_accordion_id
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - computed_field
+id: paragraph.accordion.ptoc
+targetEntityType: paragraph
+bundle: accordion
+mode: ptoc
+content:
+  field_accordion_header_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_accordion_id:
+    weight: 1
+    label: hidden
+    settings:
+      sanitized: true
+      cache_unit: -1
+      cache_duration: 1
+    third_party_settings: {  }
+    type: computed_string
+    region: content
+hidden:
+  field_accordion_body_content: true
+  field_accordion_header_content: true

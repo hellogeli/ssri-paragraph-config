@@ -1,0 +1,50 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion.field_accordion_body_content
+    - field.field.paragraph.accordion.field_accordion_header_content
+    - field.field.paragraph.accordion.field_accordion_header_title
+    - field.field.paragraph.accordion.field_accordion_id
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - computed_field
+    - text
+id: paragraph.accordion.default
+targetEntityType: paragraph
+bundle: accordion
+mode: default
+content:
+  field_accordion_body_content:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_accordion_header_content:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_accordion_header_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_accordion_id:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: computed_string_widget
+    region: content
+hidden:
+  created: true
+  status: true

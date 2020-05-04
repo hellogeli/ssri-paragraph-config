@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_h2_section
+    - node.type.page
+    - paragraphs.paragraphs_type.h2_sections
+  module:
+    - entity_reference_revisions
+id: node.page.field_page_h2_section
+field_name: field_page_h2_section
+entity_type: node
+bundle: page
+label: 'H2 Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      h2_sections: h2_sections
+    target_bundles_drag_drop:
+      h2_sections:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

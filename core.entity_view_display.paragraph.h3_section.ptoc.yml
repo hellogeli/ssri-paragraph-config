@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.ptoc
+    - field.field.paragraph.h3_section.field_h3_anchor_id
+    - field.field.paragraph.h3_section.field_h3_content
+    - field.field.paragraph.h3_section.field_h3_title
+    - paragraphs.paragraphs_type.h3_section
+  module:
+    - computed_field
+id: paragraph.h3_section.ptoc
+targetEntityType: paragraph
+bundle: h3_section
+mode: ptoc
+content:
+  field_h3_anchor_id:
+    type: computed_string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      sanitized: true
+      cache_unit: -1
+      cache_duration: 1
+    third_party_settings: {  }
+  field_h3_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_h3_content: true

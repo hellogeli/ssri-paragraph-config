@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.h3_section.field_h3_anchor_id
+    - field.field.paragraph.h3_section.field_h3_content
+    - field.field.paragraph.h3_section.field_h3_title
+    - paragraphs.paragraphs_type.h3_section
+  module:
+    - computed_field
+    - text
+id: paragraph.h3_section.default
+targetEntityType: paragraph
+bundle: h3_section
+mode: default
+content:
+  field_h3_anchor_id:
+    type: computed_string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      sanitized: true
+      cache_unit: -1
+      cache_duration: 1
+    third_party_settings: {  }
+  field_h3_content:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_h3_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

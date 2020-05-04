@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_h2_h3_section
+    - paragraphs.paragraphs_type.h2_sections
+    - paragraphs.paragraphs_type.h3_section
+  module:
+    - entity_reference_revisions
+id: paragraph.h2_sections.field_h2_h3_section
+field_name: field_h2_h3_section
+entity_type: paragraph
+bundle: h2_sections
+label: 'H3 Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      h3_section: h3_section
+    target_bundles_drag_drop:
+      h2_sections:
+        weight: 7
+        enabled: false
+      h3_section:
+        enabled: true
+        weight: 8
+      ptoc_container:
+        weight: 9
+        enabled: false
+      ptoc_image:
+        weight: 10
+        enabled: false
+      ptoc_links:
+        weight: 11
+        enabled: false
+      ptoc_text:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

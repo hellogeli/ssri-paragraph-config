@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: h2_sections
+label: 'H2 Sections'
+description: 'Used in Basic Page.'
+behavior_plugins: {  }
